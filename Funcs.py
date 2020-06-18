@@ -5,7 +5,7 @@ def getUserAndMessage(buffer):
 	# Что принимает на вход функция: :cypher_aaa!cypher_aaa@cypher_aaa.tmi.twitch.tv PRIVMSG #feelsn1man :!hello
 	index = buffer.find('!')
 	user = buffer[1:index]
-	index = buffer.rfind(':') #находит нужный элемент (:), начиная с конца
+	index = buffer.rfind(':')
 	message = buffer[index+1:]
 	return (user, message)
 
